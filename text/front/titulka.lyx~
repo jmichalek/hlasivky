@@ -1,0 +1,407 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language czech
+\language_package babel
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_title "Povinné zveřejňování informací (diplomová práce)"
+\pdf_author "Jakub Michálek"
+\pdf_subject "zákon o svobodném přístupu k informacím"
+\pdf_keywords "informace, publikační povinnost"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.5cm
+\topmargin 3cm
+\rightmargin 2.5cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 0 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+Univerzita Karlova v Praze
+\begin_inset Newline newline
+\end_inset
+
+Matematicko-fyzikální fakulta
+\size large
+
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+DIPLOMOVÁ PRÁCE
+\begin_inset VSpace 10mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename logo.pdf
+	width 30text%
+
+\end_inset
+
+
+\begin_inset VSpace 15mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Mgr.
+ Bc.
+ Jakub Michálek
+\size larger
+ 
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+Numerické modelování kmitání hlasivek
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Katedra geofyziky
+\series bold
+\size large
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 10mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size large
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="50text%">
+<column alignment="left" valignment="top" width="50text%">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vedoucí diplomové práce:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RNDr.
+ Jakub Velímský, Ph.D.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Studijní program:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fyzika
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Studijní obor:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Teoretická fyzika
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size large
+\begin_inset VSpace 10mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Praha 2016
+\size large
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+Poděkování
+\end_layout
+
+\begin_layout Standard
+\noindent
+Děkuji za inspiraci, trpělivost a podporu vedoucímu své diplomové práce
+ RNDr.
+ Jakubu Velímskému, Ph.
+\begin_inset space \thinspace{}
+\end_inset
+
+D., a školiteli Ing.
+ Jaromíru Horáčkovi, DrSc., a kolegům z pracovní skupiny, která se u něho
+ příležitostně scházela k diskusím o simulaci hlasivek.
+ Dále děkuji RNDr.
+ Petře Maierové, Ph.D., a zaměstnancům vývojářského střediska CSC v Espoo
+ ve Finsku za pomoc s porozuměním počítačovému programu Elmer.
+ Dále děkuji kolektivu katedry geofyziky za zajištění serverů a přátelského
+ zázemí.
+ Svému otci, doc.
+ MUDr.
+ Pavlu Michálkovi, Ph.D., D.E.S.A., MSc., děkuji za poskytnuté fotografie z vokálního
+ traktu a rady v oblasti lékařství a anatomie.
+ Dále děkuji své milé, rodině a spolupracovníkům, že mi umožnili věnovat
+ se studiu a vydatně mě při něm podporovali.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage newpage
+\end_inset
+
+Toto dílo lze užít za podmínek následující licence:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+\begin_inset Graphics
+	filename by-sa.pdf
+	scale 60
+
+\end_inset
+
+ Creative Commons -- Uveďte autora -- Zachovejte licenci 4.0
+\begin_inset Newline newline
+\end_inset
+
+<
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://creativecommons.org/licenses/by-sa/4.0/
+\end_layout
+
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 50theight%*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\noindent
+
+\series bold
+Čestné prohlášení
+\end_layout
+
+\begin_layout Standard
+\noindent
+Prohlašuji, že jsem tuto diplomovou práci vypracoval samostatně a výhradně
+ s
+\begin_inset space ~
+\end_inset
+
+použitím citovaných pramenů, literatury a dalších odborných zdrojů.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beru na vědomí, že se na moji práci vztahují práva a povinnosti vyplývající
+ ze zákona č.
+\begin_inset space ~
+\end_inset
+
+121/2000 Sb., autorského zákona, v platném znění, zejména skutečnost, že
+ Univerzita Karlova v Praze má právo na uzavření licenční smlouvy o užití
+ této práce jako školního díla podle § 60 odst.
+ 1 autorského zákona.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\noindent
+ 
+\begin_inset VSpace 1cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+V Praze dne 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+Mgr.
+ Bc.
+ Jakub Michálek
+\end_layout
+
+\end_body
+\end_document

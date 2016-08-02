@@ -1,0 +1,149 @@
+#!/bin/bash
+
+# -----------------------------------
+# Function scriptDir()
+# -----------------------------------
+
+# Shows the directory in which the script and its files are located
+
+scriptDir() {
+  local SOURCE="${BASH_SOURCE[0]}"
+  local DIR=""
+
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+echo "$DIR"
+}
+
+startDir="$( pwd )"
+baseDir="$( scriptDir )"
+
+#echo "startDir " $startDir
+#echo "baseDir " $baseDir
+
+#trap "exit 1" TERM
+#export TOP_PID=$$
+
+source $baseDir/library.sh   # load library of functions
+source $baseDir/config.ini   # load default configuration
+
+startInfo
+
+# -----------------------------------
+# Parsing the arguments
+# -----------------------------------
+
+  echo "Parsing arguments..."
+ 
+  while [[ $# > 0 ]]
+  do
+  key="$1"
+
+remote=false
+steadyState=false
+
+case $key in
+    -r|--remote)
+    remote=true
+    echo "We will run remotely as requested..."
+    shift # past argument
+    ;;
+    --probes)
+    echo -e "I will show you the positions of points in the mesh.\n"
+    showProbes
+    #kill -s TERM $TOP_PID
+    exit
+    shift # past argument
+    ;;    
+    -i|--install)
+    installThis
+    echo -e "The script was installed, I am ending the installation.\n"
+    #kill -s TERM $TOP_PID
+    exit
+    shift # past argument
+    ;;
+    -u|--update)
+    updateScript
+    echo -e "The script was updated in the git repository.\n"
+    #kill -s TERM $TOP_PID
+    exit
+    shift # past argument
+    ;;
+    -s|--sync)
+    echo -e "We shall download the new results as requested.\n"
+    watchAndSyncRemote
+    #kill -s TERM $TOP_PID
+    exit
+    shift # past argument
+    ;;
+    -c|--connect)
+    echo -e "We shall connect to remote machine as requested.\n"
+    connect
+    #kill -s TERM $TOP_PID
+    exit
+    shift # past argument
+    ;;
+    --points)
+    echo -e "We shall show all the points with standard probes.\n"
+    points
+    #kill -s TERM $TOP_PID
+    exit
+    shift # past argument
+    ;;
+    --analyze)
+    echo -e "We shall do the analysis and create graphs.\n"
+    analyze
+    #kill -s TERM $TOP_PID
+    exit
+    shift # past argument
+    ;;
+    --modal)
+    echo -e "We shall do the modal analysis and save in txt file.\n"
+    modal=true
+    #kill -s TERM $TOP_PID
+    shift # past argument
+    ;;
+    --nomesh)
+    echo -e "We shall skip the mesh generation and use the existing mesh.\n"
+    skipmesh=true
+    #kill -s TERM $TOP_PID
+    shift # past argument
+    ;;
+    -h|--help)
+    helpMe
+    exit
+    shift # past argument
+    ;;
+
+    *)
+            # unknown option
+    ;;
+esac
+shift # past argument or value
+done
+
+if [[ -n $1 ]]; then
+    echo "Last line of file specified as non-opt/last argument:"
+    tail -1 $1
+fi
+
+# -----------------------------------
+# Main tree
+# -----------------------------------
+
+
+
+
+if [ "$remote" = true ]; then
+  runOnRemote  
+else
+  checkConfigFile
+  source config.ini   # import variables 
+  runLocally
+fi
+
+echo -e "\n"

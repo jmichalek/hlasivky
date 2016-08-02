@@ -1,0 +1,123 @@
+Header
+  CHECK KEYWORDS Warn
+  Mesh DB "." "mesh"
+  Include Path ""
+  Results Directory ""
+End
+
+Simulation
+  Max Output Level = 5
+  Coordinate System = Cartesian
+  Coordinate Mapping(3) = 1 2 3
+  Simulation Type = Steady state
+  Steady State Max Iterations = 10
+  Output Intervals = 1
+  Timestepping Method = BDF
+  BDF Order = 1
+  Solver Input File = case.sif
+  Post File = case.vtu
+  Coordinate Scaling = 0.01
+End
+
+Constants
+  Gravity(4) = 0 -1 0 9.82
+  Stefan Boltzmann = 5.67e-08
+  Permittivity of Vacuum = 8.8542e-12
+  Boltzmann Constant = 1.3807e-23
+  Unit Charge = 1.602e-19
+End
+
+Body 1
+  Target Bodies(1) = 1
+  Name = "Body Property 1"
+  Equation = 1
+  Material = 1
+End
+
+Body 2
+  Target Bodies(1) = 2
+  Name = "Body Property 2"
+  Equation = 1
+  Material = 2
+End
+
+Body 3
+  Target Bodies(1) = 7
+  Name = "Body Property 3"
+  Equation = 1
+  Material = 3
+End
+
+Solver 1
+  Equation = Linear elasticity
+  Procedure = "StressSolve" "StressSolver"
+  Variable = -dofs 2 Displacement
+  Element=p:2
+  Eigen System Select = Smallest magnitude
+  Eigen Analysis = True
+  Eigen System Values = 5
+  Exec Solver = Always
+  Stabilize = True
+  Bubbles = False
+  Lumped Mass Matrix = False
+  Optimize Bandwidth = True
+  Steady State Convergence Tolerance = 1.0e-5
+  Nonlinear System Convergence Tolerance = 1.0e-7
+  Nonlinear System Max Iterations = 20
+  Nonlinear System Newton After Iterations = 3
+  Nonlinear System Newton After Tolerance = 1.0e-3
+  Nonlinear System Relaxation Factor = 1
+  Linear System Solver = Direct
+  Linear System Direct Method = Umfpack
+  Linear System Convergence Tolerance = 1.0e-3
+End
+
+Solver 2
+  Exec Solver = After Saving
+  Equation = Save eigenvalues
+  Procedure = "SaveData" "SaveScalars"
+  Filename = "Eigenvalues.dat"
+  Variable 1 = Displacement
+  !Save Eigenvalues = True
+  Save Eigenfrequencies = Logical True
+End
+
+Equation 1
+  Name = "ModalStress"
+  Active Solvers(2) = 1 2
+End
+
+Material 1
+  Name = "Muscle"
+  Density = 1030
+  Poisson ratio = 0.4
+  Youngs modulus = 65e3
+End
+
+Material 2
+  Name = "Epithelium"
+  Density = 1030
+  Poisson ratio = 0.49
+  Youngs modulus = TMPYMEPITHELIUM
+End
+
+Material 3
+  Name = "LaminaPropria"
+  Density = 1030
+  Poisson ratio = 0.49
+  Youngs modulus = TMPYMFOLD
+End
+
+Boundary Condition 1
+  Target Boundaries(5) = 4 5 6 9 12 14 15 16 20 21 
+  Name = "Fixed"
+  Displacement 2 = 0
+  Displacement 1 = 0
+End
+
+Boundary Condition 2
+  Target Boundaries(1) = 2 
+  Name = "Free"
+  Force 1 = 0
+  Force 2 = 0
+End

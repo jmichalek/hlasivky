@@ -1,0 +1,48 @@
+%% fonty
+\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{Stempel Garamond}
+%\defaultfontfeatures{Mapping=tex-text}
+\usepackage{booktabs}
+\usepackage{textcase}
+\renewcommand{\textsc}[1]{\MakeTextUppercase{#1}} % příjmení autorů velkými písmeny
+%\usepackage{xunicode}
+%% typografická zlepšení
+%\usepackage{csquotes}
+
+%% floats get barriers
+\usepackage[section]{placeins}
+
+%% poznámky pod čarou
+\usepackage{footnote} % možnost používat poznámky pod čarou v tabulkách
+\makesavenoteenv{tabular} % automaticky se budou ukládat poznámky pod čarou v prostředí tabular
+\makesavenoteenv{table} % automaticky se budou ukládat poznámky pod čarou v prostředí table
+% zůstává problém, že při kliknutí na odkaz na poznámku pod čarou vytvořený pomocí hyperref nefunguje
+
+\let\oldurl\url
+\renewcommand{\url}[1]{<\oldurl{#1}>}
+
+%% citování
+\usepackage[backend=biber,
+%style=footnote-dw,%authortitle-dw
+style=numeric,
+isbn=true,
+backref=true,
+hyperref]{biblatex} 
+
+\defbibheading{bibliography}{\section*{Seznam použité literatury}} % přejmenování sekce
+
+\bibliography{literatura/hlasivky}
+%% závěrečné úkony
+\AtEndDocument{
+\addcontentsline{toc}{section}{Seznam použité literatury}
+\printbibliography} % tisk bibliografie na konci souboru
+
+% popiseky tabulek
+\usepackage[hang,bf,small]{caption} % úprava popisku tabulky
+\setlength{\captionmargin}{20pt}
+
+% tisk částí
+\let\stdpart\part
+\renewcommand*{\part}{\clearpage\stdpart}
+\let\stdpart\section
+\renewcommand*{\section}{\clearpage\stdpart}

@@ -1,0 +1,11 @@
+#! /bin/bash
+# Připravuje text ke zpracování
+# use: run ./ml main
+
+#set -x
+vlna $1.tex
+xelatex $1 
+biber $1
+xelatex $1
+rm $1.aux $1.bbl $1.bcf $1.blg $1.log $1.lot $1.out $1.run.xml $1.toc texput.log $1.lof
+

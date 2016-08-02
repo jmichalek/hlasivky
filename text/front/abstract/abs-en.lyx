@@ -1,0 +1,205 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%% fonty
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Stempel Garamond}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{textcase}
+\renewcommand{\textsc}[1]{\MakeTextUppercase{#1}} % příjmení autorů velkými písmeny
+
+%% typografická zlepšení
+\usepackage{csquotes}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_title "Povinné zveřejňování informací (diplomová práce)"
+\pdf_author "Jakub Michálek"
+\pdf_subject "zákon o svobodném přístupu k informacím"
+\pdf_keywords "informace, publikační povinnost"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.5cm
+\topmargin 3cm
+\rightmargin 2.5cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 0 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+
+\series bold
+Abstract
+\end_layout
+
+\begin_layout Standard
+To what extend do the authorities comply with the duty to publish information
+ according to the Act No.
+ 106\SpecialChar \slash{}
+1999 Coll., on the Free Access to Information? My assumption is that
+ the authorities in the Czech Republic do not comply with the duty to publish
+ information in many cases.
+ I also ask a second question, whether it is possible to enforce the compliance
+ with existing legal means.
+\end_layout
+
+\begin_layout Standard
+I chose the topic of mandatory publishing of information because it is the
+ easiest, most economic and efficient way how to make information available.
+ It is also a hot topic, since new legislation is being prepared in this
+ area.
+\end_layout
+
+\begin_layout Standard
+The thesis is divided into introduction, first part devoted to the legal
+ framework in force, second part devoted to the possibility of its enforcement,
+ third part devoted to the possible alternative ways to regulate mandatory
+ publishing, fourth part devoted to my own suggestions to improve the existing
+ legal framework, and conclusion.
+\end_layout
+
+\begin_layout Itemize
+In the first part I address the foundations of the legal framework of informatio
+n publishing in force, with the indispensable outreach to providing information
+ in general.
+ In greater detail I work on defining the subjects of duty to publish informatio
+n and their superior administrative authorities, as well as treating the
+ legal remedies in the case of administrative delays and failure to take
+ action.
+\end_layout
+
+\begin_layout Itemize
+In the second part I examine the extend to which the public authorities
+ comply with the publication duty.
+ I devise and use a simple procedure for evaluation.
+ I compare the results with the publishing of information in the private
+ sector and previous analyses.
+ I outline several procedural ways which can achieve the publishing of informati
+on by legal remedies, and I try some of them myself.
+ 
+\end_layout
+
+\begin_layout Itemize
+In the third part I treat the possible alternatives to regulation, which
+ go beyond the framework of the Act on the Free Access to Information.
+ This covers mainly examples from the legal framework in force in different
+ laws in the Czech Republic and the basic characteristic of the progressive
+ elements in British and Slovak law.
+\end_layout
+
+\begin_layout Itemize
+In the fourth part I formulate my own proposals to change the Act on the
+ Free Access to Information and related acts regarding the publishing of
+ information.
+\end_layout
+
+\begin_layout Standard
+The conclusion summarizes the results of work: I designed a practical legal
+ procedure to achieve publication of records.
+ I also quantitatively validated the assumption that certain kinds of public
+ authorities do not comply with the duty to publish information at all,
+ which should be considered a regulatory failure.
+ I sketched its possible legislative solutions.
+ The secondary result is that I determined the superior administrative authority
+ of several public institutions, for the purposes of information disclosure,
+ which appears to be different from the existing judicial decisions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+Key-words: Duty to publish records, transparency, superior administrative
+ authority
+\end_layout
+
+\end_body
+\end_document
